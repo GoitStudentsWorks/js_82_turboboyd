@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Shopping List</title>
+    
+    <script type="module" crossorigin src="/js_82_turboboyd/assets/shopping-list-2265935d.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_82_turboboyd/assets/book-shop@2x-456ff2b5.js">
+    <link rel="stylesheet" href="/js_82_turboboyd/assets/book-shop@2x-e2af0571.css">
+  </head>
+
+  <body class="page">
+    <!-- Хедер -->
+    <header class="header">
+      <div class="container header-container">
+  <nav class="header-nav">
+    <a aria-label="Logo" class="header-logo" href="./index.html">
+      <svg class="header-logo-icon" width="24" height="24">
+        <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#booklogo-icon"></use>
+      </svg>
+      <svg class="header-logo-icon-exergue" width="77" height="14">
+        <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-Bookshelf"></use>
+      </svg>
+    </a>
+    <ul class="header-list-nav is-hidden">
+      <li>
+        <a class="header-link-nav" href="./index.html">HOME</a>
+      </li>
+      <li>
+        <a class="header-link-nav current" href="./shopping-list.html"
+          >SHOPPING LIST<svg class="header-link-icon" width="20" height="20">
+            <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#bag"></use></svg
+        ></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="header-buttons">
+    <label id="slider" class="switch">
+      <input aria-label="slider" type="checkbox" id="slider" />
+      <span class="slider round"></span>
+    </label>
+    <button aria-label="menu" class="burger" type="button">
+      <svg class="header-menu-icon-mob" width="28" height="28">
+        <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#ham-menu-icon"></use>
+      </svg>
+    </button>
+    <button class="header-btn-close" type="button">
+      <svg class="header-close-icon-mob" width="28" height="28">
+        <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#x-close-icon"></use>
+      </svg>
+    </button>
+    <div class="header-btn-user-wrap">
+      <!-- <button class="header-btn-user is-hidden" type="button">
+        <div class="btn-container">
+          <div class="header-btn-user-foto">
+            <svg class="header-btn-user-icon" width="19" height="19">
+              <use href="./images/sprite.svg#user-default-icon"></use>
+            </svg>
+          </div>
+          <p class="user-name-tablet-desktop">welcome</p>
+          <svg class="header-btn-down-icon" width="23" height="26">
+            <use href="./images/sprite.svg#user-arrow-down-icon"></use>
+          </svg>
+        </div>
+      </button> -->
+
+      <!-- <button class="header-menu-btn-exit" type="button">
+          Log out
+          <svg class="menu-btn-start-icon" width="20" height="20">
+            <use href="./images/sprite.svg#arrow-right-icon"></use>
+          </svg>
+        </button> -->
+    </div>
+    <!-- <button class="menu-btn-start-tab" type="button">
+      Sign up
+      <svg class="menu-btn-start-icon" width="20" height="20">
+        <use href="./images/sprite.svg#icon-arrow-right"></use>
+      </svg>
+    </button> -->
+  </div>
+</div>
+
+      <div class="mob-menu-start is-hidden"></div>
+
+    </header>
+    <main class="content shop-wrap">
+      <div class="container page-container">
+        <section class="section section-sidebar">
+          <aside class="sidebar sidebar-shoppinglist">
+            <!-- support -->
+            <div class="support">
+              <h2 class="head-title">
+                Support Ukraine
+                <svg class="icon-ua" width="20" height="32">
+                  <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-ua"></use>
+                </svg>
+              </h2>
+
+              <div class="swiper mySwiper">
+                <ul class="swiper-wrapper support-list"></ul>
+              </div>
+
+              <button
+                type="button"
+                class="next swiper-next"
+                aria-label="Swipe next"
+              >
+                <span class="icon-container">
+                  <svg class="icon-down" width="22" height="22">
+                    <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-angle-down"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </aside>
+          <!-- burger-menu-->
+        </section>
+        <section class="shopping section">
+          <h2 class="title">
+            Shopping <span class="main-title_last-word">List</span>
+          </h2>
+          <!-- те що додали в корзину -->
+          <!-- книги які добавляємо  -->
+<div class="empty visually-hidden">
+  <p class="shopping-text">
+    This page is empty, add some books and proceed to order.
+  </p>
+  <picture>
+    <source
+      srcset="/js_82_turboboyd/assets/empty-desc-40c5979b.png 1x, /js_82_turboboyd/assets/empty-desc@2x-d0f3a519.png 2x"
+      media="(min-width: 1440px)"
+      type="image/png"
+      width="322"
+      height="241"
+    />
+    <source
+      srcset="/js_82_turboboyd/assets/empty-desc-918d7415.webp 1x, /js_82_turboboyd/assets/empty-desc@2x-f796e342.webp 2x"
+      media="(min-width: 1440px)"
+      type="image/webp"
+      width="322"
+      height="241"
+    />
+    <source
+      srcset="/js_82_turboboyd/assets/empty-desc-40c5979b.png 1x, /js_82_turboboyd/assets/empty-desc@2x-d0f3a519.png 2x"
+      media="(min-width: 768px) and (max-width: 1399px)"
+      type="image/png"
+      width="322"
+      height="241"
+    />
+    <source
+      srcset="/js_82_turboboyd/assets/empty-desc-918d7415.webp 1x, /js_82_turboboyd/assets/empty-desc@2x-f796e342.webp 2x"
+      media="(min-width: 768px) and (max-width: 1399px)"
+      type="image/webp"
+      width="322"
+      height="241"
+    />
+    <source
+      srcset="/js_82_turboboyd/assets/empty-mob-b6a44ab8.png 1x, /js_82_turboboyd/assets/empty-mob@2x-2c07a770.png 2x"
+      media="(max-width: 767px)"
+      type="image/png"
+      width="322"
+      height="241"
+    />
+    <source
+      srcset="data:image/webp;base64,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 1x, /js_82_turboboyd/assets/empty-mob@2x-563fa4d1.webp 2x"
+      media="(max-width: 767px)"
+      type="image/webp"
+      width="322"
+      height="241"
+    />
+    <img
+      class="img-ctack-books"
+      src="/js_82_turboboyd/assets/empty-mob-b6a44ab8.png"
+      alt="stack of books"
+      width="265"
+      height="198"
+      loading="lazy"
+    />
+  </picture>
+</div>
+
+<ul class="shopping__list"></ul>
+
+<div class="pagination-wrap">
+  <ul class="pagination-list"></ul>
+</div>
+
+          <!-- pagination -->
+          <!-- Тут буде пагінація для Shopping list
+<div class="pagination-wrap">
+  <ul class="pagination-list"></ul>
+</div> -->
+
+          <!-- modal auth -->
+          <div data-modal class="backdrop-auth visually-hidden">
+  <div class="modal-auth">
+    <button
+      data-modal-close
+      aria-label="close modal"
+      type="button"
+      class="btn__close"
+    >
+      <svg class="btn__close-modal">
+        <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="form-container">
+      <div class="form-inner">
+        <form action="#" class="signup" id="formAuth">
+          <div class="field">
+            <svg class="form__input-icon">
+              <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-user"></use>
+            </svg>
+            <input
+              aria-label="Name"
+              type="text"
+              placeholder="Name"
+              id="authName"
+              required
+              maxlength="10"
+              minlength="3"
+              pattern="[a-zA-Z]*"
+              title="The name should not exceed 10 characters."
+            />
+          </div>
+          <div class="field">
+            <svg class="form__input-icon">
+              <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-mail-02"></use>
+            </svg>
+            <input
+              aria-label="Email"
+              type="text"
+              placeholder="Email"
+              id="authEmail"
+              required
+              minlength="10"
+              maxlength="30"
+              pattern="[^@\s]+@[^@\s]+"
+              title="The Email should be no less than 10 characters and no more than 30 characters"
+            />
+          </div>
+          <div class="field">
+            <svg class="form__input-icon">
+              <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-lock-02"></use>
+            </svg>
+            <input
+              aria-label="password"
+              type="password"
+              placeholder="Password"
+              id="authPassword"
+              minlength="6"
+              required
+              title="Password must be at least 6 characters long"
+            />
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input aria-label="submit" type="submit" value="Sign up" />
+          </div>
+        </form>
+        <form action="#" class="login" id="formLogin">
+          <div class="field">
+            <svg class="form__input-icon">
+              <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-mail-02"></use>
+            </svg>
+            <input
+              aria-label="Email"
+              type="text"
+              placeholder="Email"
+              id="loginEmail"
+              required
+              minlength="10"
+              maxlength="30"
+              pattern="[^@\s]+@[^@\s]+"
+              title="The Email should be no less than 10 characters and no more than 30 characters"
+            />
+          </div>
+          <div class="field">
+            <svg class="form__input-icon">
+              <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-lock-02"></use>
+            </svg>
+            <input
+              aria-label="password"
+              type="password"
+              placeholder="Password"
+              id="loginPassword"
+              minlength="6"
+              required
+              title="Password must be at least 6 characters long"
+            />
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input aria-label="submit button" type="submit" value="Sign in" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="slide-controls">
+      <input aria-label="slide" type="radio" name="slide" id="login" />
+      <input aria-label="slide" type="radio" name="slide" id="signup" checked />
+      <label for="signup" class="slide signup">Sign up</label>
+      <label for="login" class="slide login">Sign in</label>
+      <div class="slider-tab"></div>
+    </div>
+  </div>
+</div>
+
+          <div class="backdrop-auth-out visually-hidden" data-backdrop-out>
+  <div class="modal-auth-out">
+    <button
+      data-btn-out-close
+      type="button"
+      aria-label="Close Login Window"
+      class="btn__close"
+    >
+      <svg class="btn__close-modal">
+        <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-close"></use>
+      </svg>
+    </button>
+    <p class="text-auth-out">
+      Are you sure you want to leave our wonderful app?
+    </p>
+
+    <div class="btn-auth-out">
+      <button data-btn-out-yes type="button" aria-label="yes" class="btn">
+        Yes
+      </button>
+      <button data-btn-out-no type="button" aria-label="no" class="btn">
+        No
+      </button>
+    </div>
+    <div class="messagetext" id="messageText"></div>
+  </div>
+</div>
+
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <span class="footer-text"
+          >&copy; 2023 | All Rights Reserved |&#160;</span
+        >
+        <span class="footer-text footer__heart"
+          >Developed with&nbsp;
+          <svg
+            class="footer__heart-goit"
+            width="14"
+            height="13"
+            viewbox="0 0 14 13"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 12.88L6.02 11.9C2.38 8.68 0 6.51 0 3.85C0 1.68 1.68 0 3.85 0C5.04 0 6.23 0.56 7 1.47C7.77 0.56 8.96 0 10.15 0C12.32 0 14 1.68 14 3.85C14 6.51 11.62 8.68 7.98 11.9L7 12.88Z"
+              fill="#eb3d3d"
+            /></svg
+          >&nbsp;
+          <span class="footer-text"
+            >by&nbsp;
+            <button type="button" class="footer-btn">
+              <span class="footer-btn-text"> GoIT Students</span>
+            </button>
+          </span>
+        </span>
+      </div>
+    </footer>
+
+    <div class="footer-backdrop visually-hidden">
+      <div class="footer-modal visually-hidden">
+        <button type="button" class="footer-modal-close-btn">
+          <svg class="footer-modal-close-btn__icon" width="18" height="18">
+            <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="head-team-modal">Team 6</h2>
+<ul class="team-list">
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/daria-785ce9b6.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/daria-fb7028ec.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/daria-fb7028ec.jpg"
+        alt="daria"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Daria Hladchenko</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/daria-hladchenko-174238282/"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+        ><svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use></svg
+      ></a>
+      <a
+        href="https://github.com/DarriaGl"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use></svg
+      ></a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/andrii-7d074641.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/andrii-d1c5fa05.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/andrii-d1c5fa05.jpg"
+        alt="andrii"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Andrii Amosov</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/amosov-andrii/"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/amosovandrey"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/ihor-78f31115.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/ihor-6070ace2.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/ihor-6070ace2.jpg"
+        alt="ihor"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Ihor Kutsenko</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/kutsenko-ihor"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/ihor-kutsenko"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/olexandr-06eb5ef8.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/olexandr-6c9f32dc.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/olexandr-6c9f32dc.jpg"
+        alt="olexandr"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Olexandr Yemelianov</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/o-yemelianov/"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/AleksandrYemelianov"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/maks-fbb669e5.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/maks-c24a5b31.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/maks-c24a5b31.jpg"
+        alt="maks"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Maksym Halushko</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/maksym-halushko-804b04281"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/Maksym1988"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/denis-1d3c1bbb.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/denis-4c3d224d.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/denis-4c3d224d.jpg"
+        alt="denis"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Denis Daniv</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://de.linkedin.com/in/denis-daniv"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/turboboyd"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="data:image/webp;base64,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 " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/svetlana-f076ac98.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/svetlana-f076ac98.jpg"
+        alt="svetlana"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Svitlana Liulka</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/svitlana-liulka-aa5045277/"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/Sv-L"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/stas-b33e3804.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/stas-532b0196.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/stas-532b0196.jpg"
+        alt="stas"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Stas Pavlenko</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/stanislav-pavlenko-610b06281/"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/StanislavPavlenko"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/ludmila-3cd74ec8.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/ludmila-1d4c5f70.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/ludmila-1d4c5f70.jpg"
+        alt="ludmila"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Ludmila Tabachuk</h3>
+    <div class="wrapper-team">
+      <a href="#" class="icon-link" aria-label="linkedin" target="_blank">
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/tabachukluda"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/nikolay-5fa1d2d6.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/nikolay-d67b1e5c.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/nikolay-d67b1e5c.jpg"
+        alt="nikolay"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Nikolay Unku</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/nickolay-unku-963493282/"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/ReySinez"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+  <li class="team-name-list">
+    <picture>
+      <source srcset="/js_82_turboboyd/assets/dima-6ef88b13.webp " type="image/webp" />
+      <source srcset="/js_82_turboboyd/assets/dima-f4e8cb41.jpg " type="image/jpeg" />
+      <img
+        src="/js_82_turboboyd/assets/dima-f4e8cb41.jpg"
+        alt="dima"
+        width="124"
+        height="124"
+      />
+    </picture>
+    <h3 class="head-of-team">Dmytro Liashok</h3>
+    <div class="wrapper-team">
+      <a
+        href="https://www.linkedin.com/in/dmitriy-liashok-499074180/"
+        class="icon-link"
+        aria-label="linkedin"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/magister3"
+        class="icon-link"
+        aria-label="github"
+        target="_blank"
+      >
+        <svg class="button-icon" width="24" height="24">
+          <use href="/js_82_turboboyd/assets/sprite-a6312564.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </li>
+</ul>
+
+      </div>
+    </div>
+    
+  </body>
+</html>
