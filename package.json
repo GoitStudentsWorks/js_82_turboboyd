@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/team-project-books/",
+    "build": "vite build --base=/js_82_turboboyd/",
     "preview": "vite preview"
   },
   "devDependencies": {
